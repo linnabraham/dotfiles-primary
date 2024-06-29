@@ -127,19 +127,12 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
 python_venv
 #source ~/.scripts/virtualenvwrapper.plugin.zsh
-export PATH="$HOME/.cargo/bin/:$PATH"
-export PATH="$HOME/.local/bin/:$PATH"
-export PATH="$HOME/.local/bin/external/:$PATH"
-#export PATH="$PATH:$HOME/.conda/envs/p36/bin/"
-#export PATH="$PATH:$HOME/.conda/envs/p39/bin/"
-#export PATH="$PATH:/opt/miniconda3/envs/default/bin/"
-export PATH="$HOME/.local/bin/pip-packages/bin:$PATH"
 source $HOME/.zsh_aliases
+source $HOME/.extra_paths
 export HABITICA_TOKEN=87a1a0dd-5b8f-4b34-8336-55a56a0401ef
 export HABITICA_UUID=ad875744-0b26-4f3d-af1b-ab54fade5d13
 source $HOME/.local/bin/zbell.plugin.zsh
 
-#export PYTHONPATH=$HOME/.local/bin/pip-packages/lib/python3.10/site-packages
 #https://python.readthedocs.io/en/v2.7.2/using/cmdline.html#envvar-PYTHONNOUSERSITE
 export PYTHONNOUSERSITE=1
 
@@ -167,11 +160,6 @@ bindkey '^[[A' history-substring-search-up
 #bindkey '^[[1;2C' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 #bindkey '^[[1;5D' history-substring-search-down
-
-export PATH=$PATH:$HOME/work/nov2023/suitPipeline
-export al1suit=$HOME/work/nov2023/suitPipeline/bash_scripts
-export suitproduct=$HOME/work/nov2023/suitPipeline/myoutputs
-export qldinfolder=$HOME/work/nov2023/suitPipeline/taroutput
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
