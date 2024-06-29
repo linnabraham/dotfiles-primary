@@ -44,9 +44,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 ENABLE_CORRECTION="true"
-#setopt CORRECT_ALL
 setopt CORRECT
-
 
 autoload -Uz add-zsh-hook
 
@@ -65,7 +63,6 @@ if [[ "$TERM" == (Eterm*|alacritty*|aterm*|gnome*|konsole*|kterm*|putty*|rxvt*|s
         add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-#source $HOME/.local/bin/external/zbell.plugin.zsh # plugin to enable notification for long commands
 export TEXMFHOME=/home/linn/.texmf/
 export PATH="$PATH:$HOME/.virtualenvs/py37/bin" # append path in the beginning to not override default python
 
@@ -115,8 +112,6 @@ PROMPT+='
 echo
 ##### Changes to prompt #####
 
-#source $HOME/.scripts/tt.sh
-#export PATH="$PATH:$HOME/.scripts"
 python_venv() {
   #MYVENV=./helpers
   MYVENV=./.venv
