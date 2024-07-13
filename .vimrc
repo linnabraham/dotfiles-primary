@@ -38,7 +38,7 @@ call plug#begin(expand('~/.vim/plugged'))
 "*****************************************************************************
 "Plug 'morhetz/gruvbox'
 "Plug 'altercation/vim-colors-solarized'
-""Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdcommenter' " For code commenting powers
