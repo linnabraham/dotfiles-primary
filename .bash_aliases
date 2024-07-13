@@ -35,3 +35,4 @@ else
     alias ls='/bin/ls $LS_OPTIONS'
 fi
 alias ytdl-short='yt-dlp -o "%(id)s.%(ext)s'
+alias mem='BLOCK_BUTTON=1 memory'
