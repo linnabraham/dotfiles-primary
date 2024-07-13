@@ -92,3 +92,5 @@ set relativenumber
 " map ctrl-backspace to clear whole word
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
+" Add full file path to your existing statusline
+set statusline+=%F
