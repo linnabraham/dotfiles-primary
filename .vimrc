@@ -42,6 +42,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdcommenter' " For code commenting powers
+Plug 'preservim/nerdtree'
 "" A bunch of useful language related snippets (ultisnips is the engine).
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "Plug 'tpope/vim-surround'
@@ -94,3 +95,5 @@ noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 " Add full file path to your existing statusline
 set statusline+=%F
+" Hotkey for NERDTreeToggle
+nnoremap <C-n> :NERDTreeToggle<CR>
