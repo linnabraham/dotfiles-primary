@@ -1,0 +1,1 @@
+alias zreloadkeys="killall sxhkd && sxhkd &!"
