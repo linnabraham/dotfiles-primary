@@ -13,3 +13,11 @@
 #fi
 
 # If you want to use XFCE config tools...
+nitrogen --restore
+setbg /home/linn/Downloads/wallpapers
+tint2 -c /home/linn/.config/tint2/tint2rc &
+plank &
+orage &
+mail-notify.sh &
+sxhkd &
+pcmanfm-qt --daemon-mode &
