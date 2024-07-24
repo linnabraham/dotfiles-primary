@@ -13,11 +13,26 @@
 #fi
 
 # If you want to use XFCE config tools...
-nitrogen --restore
+#
+#xfce-mcs-manager &
+#hot-corner.sh &
+#skippy-xd --start-daemon &
+##bing-rotate.sh &
 setbg /home/linn/Downloads/wallpapers
-tint2 -c /home/linn/.config/tint2/tint2rc &
-plank &
-orage &
+picom &
+#MONITOR=eDP-1 polybar example &
+polywrapper.sh &
+#(xdo id -m -N Polybar && polybar-msg cmd hide)&
+#copyq &
+#conky -c ~/.config/conky/conky-always.conf -d &
+#(sleep 10s; musiclogger) &
 mail-notify.sh &
+sh /home/linn/.local/bin/experimental/sync-on-write &
+#safeeyes &
+#transmission-daemon &
 sxhkd &
 pcmanfm-qt --daemon-mode &
+xautolock -time 10 -locker i3lock-custom -detectsleep &
+#xdotool behave_screen_edge --delay 600 --quiesce 300 top exec bottom-edge.sh &
+#battery-lev.sh &
+#song-notifier.sh &
