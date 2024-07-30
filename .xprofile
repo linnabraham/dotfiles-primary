@@ -7,6 +7,7 @@ mpris-proxy & 		# for general media playback control
 xcompmgr &      # compositor
 #clipmenud &		# clipboard daemon
 xset r rate 300 30 &	# Speed up the keyboard rate
+xinput --set-prop 9 'libinput Accel Speed' .5 # speed up the touchpad
 xset -b # disable system bell
 
 #setxkbmap -option caps:escape
