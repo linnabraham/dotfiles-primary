@@ -97,3 +97,5 @@ noremap! <C-h> <C-w>
 set statusline+=%F
 " Hotkey for NERDTreeToggle
 nnoremap <C-n> :NERDTreeToggle<CR>
+" make mupdf default reader for vimtex
+let g:vimtex_view_method = 'mupdf'
