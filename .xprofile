@@ -1,0 +1,16 @@
+#!/bin/sh
+#xrandr --output eDP-1 --mode "1280x720"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export GPODDER_HOME="$HOME/.config/gPodder/"
+export GPODDER_DOWNLOAD_DIR="$HOME/.local/share/linn/podcasts"
+mpris-proxy & 		# for general media playback control
+xcompmgr &      # compositor
+#clipmenud &		# clipboard daemon
+xset r rate 300 30 &	# Speed up the keyboard rate
+xset -b # disable system bell
+
+#setxkbmap -option caps:escape
+setxkbmap -option caps:swapescape
+
+[[ -f ~/.bash_profile ]] && source ~/.bash_profile
+
