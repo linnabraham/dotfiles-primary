@@ -1,0 +1,89 @@
+# multimedia keys
+XF86Favorites
+	mpc toggle
+shift + XF86Favorites
+	playerctl play-pause
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +1000
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -1000
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86AudioPrev
+	mpc prev
+XF86AudioNext
+	mpc next
+XF86AudioPlay
+	playerctl play-pause
+XF86AudioPause
+	mpc toggle
+XF86MonBrightnessUp
+	change-backlight.py -inc 1
+	light -A 1
+	xbacklight -inc 1
+XF86MonBrightnessDown
+	change-backlight.py -dec 1
+	light -U 1
+	xbacklight -dec 1
+Print
+	openbox-screenshot.sh
+control + Print
+	maimpick
+super + Return
+	alacritty
+	zsh -i -c "tmux_with_terminal"
+super + a
+        j4-dmenu-desktop
+        jgmenu_run
+super + A
+        dmenu_run
+super + b
+        bukumenu
+super + B
+	bukuadd
+# super + c # key already bound
+        #clipmenu
+#super + d
+        #already bound in i3
+#super + d
+#        dmenu_run
+#super + f
+#        already bound in i3
+super + F
+        dmenufm
+super + O
+        clipmenu
+super + o
+	dmenu-website.sh
+super + p
+        rofi-pass
+#super + q
+#	xdotool key Alt+F4
+super + s
+        rofi-screenshot
+super + S
+        rofi-screenshot -s
+super + T
+        mpdmenu.sh
+super + u
+	wrapper-wmctrl.sh start-plattenalbum
+super + w
+        switch-i3-workspace.sh
+super + BackSpace
+        sysact
+super + slash
+        mpc_control -t
+super + question
+        dmenu-wrapper-music
+super + colon
+        gtk-launch st-calc
+alt + XF86Favorites
+	playerctl play-pause
+alt + question
+	hotkey-helper.sh
+shift + Prior
+	mpc prev
+shift + Next
+	mpc next
+F7
+        mpc toggle
