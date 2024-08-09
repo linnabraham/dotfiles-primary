@@ -16,7 +16,7 @@
 #
 #xfce-mcs-manager &
 
-setbg /home/linn/Downloads/wallpapers
+setbg -s /home/linn/Downloads/wallpapers
 polywrapper.sh &
 #copyq &
 mail-notify.sh &
