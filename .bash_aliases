@@ -24,11 +24,11 @@ alias x='exit'
 alias t='trello-cmd'
 alias pconf='sudo vim /etc/pacman.conf'
 # confirm before overwriting something
-alias pi='sudo pacman -S --noconfirm'
 alias cp="cp -iv"
 alias mv='mv -iv'
 alias rm='rm -Iv'
 alias mkd="mkdir -pv" 
+alias pi='sudo pacman -S --needed --noconfirm'
 alias lf='lfub'
 if command -v exa >/dev/null; then
     alias ls='exa-wrapper.sh'
