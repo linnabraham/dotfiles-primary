@@ -45,7 +45,7 @@ Plug 'preservim/nerdcommenter' " For code commenting powers
 Plug 'preservim/nerdtree'
 "" A bunch of useful language related snippets (ultisnips is the engine).
 "Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-"Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 "Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'mileszs/ack.vim'
 Plug 'jamessan/vim-gnupg'
