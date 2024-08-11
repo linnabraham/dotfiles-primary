@@ -173,3 +173,57 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# Window color settings
+# class                 border  backgr. text    indicator
+client.focused          #ffcc66 #ffcc66 #d8dee9 #81a1c1
+#client.unfocused        #ff6666 #8FBCBB #2e3440 #8FBCBB
+#client.focused_inactive #4c566a #81a1c1 #2e3440 #2e3440
+#client.placeholder      #4c566a #2e3440 #4c566a #2e3440
+#client.urgent           #4c566a #BF616A #d8dee9 #BF616A
+#client.background       #2e3440
+
+# move workspace to display
+bindsym $mod+x move workspace to output right
+bindsym $mod+z move workspace to output left
+
+#add gaps with i3-gaps
+for_window [class="^.*"] border pixel 1
+gaps inner 0
+#removes border when only 1 window is open
+smart_borders on
+
+# Master-stack layout (kind of)
+default_orientation vertical
+for_window [class=".*"] split toggle 
+
+default_floating_border normal
+
+#custom keybinds
+bindsym $mod+F10 exec xrandr --auto
+bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu='rofi -i -dmenu'
+bindsym $mod+Tab exec rofi -i -show window
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+d workspace 10
+bindsym --release $mod+d workspace back_and_forth
+for_window [class="^TelegramDesktop"] move scratchpad, scratchpad show
+bindsym $mod+m [class="^TelegramDesktop"] scratchpad show
+for_window [class="^Logseq"] move scratchpad, scratchpad show
+#bindsym $mod+n [class="^Logseq"] scratchpad show
+for_window [class=workterm instance="workterm"] move scratchpad
+bindsym $mod+Shift+Return [class="^workterm"] scratchpad show
+for_window [class="st-calc" ] move scratchpad, scratchpad show
+bindsym $mod+Shift+y [class="^st-calc"] scratchpad show
+for_window [class="Spotify" ] move scratchpad, scratchpad show
+bindsym $mod+y [class="^Spotify"] scratchpad show
+tiling_drag modifier titlebar
+assign [class="Brave-browser" instance="brave-browser"] $ws10
+assign [class="Brave-browser" instance="crx_pfphgelppkenhllngngioolkaeelhlmi"] $ws1
+for_window [class="org-wellkord-globonote-Main"] floating enable, resize set 320 240, sticky enable, move position 1680 50
+
+#startup executables
+#exec --no-startup-id /$HOME/.config/i3/autostart.sh
+# startup a hidden terminal for general purpose work that becomes a scratchpad
+exec --no-startup-id alacritty --class="workterm"
+exec --no-startup-id $HOME/.config/openbox/autostart
