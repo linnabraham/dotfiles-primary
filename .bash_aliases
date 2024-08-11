@@ -37,3 +37,5 @@ else
 fi
 alias ytdl-short='yt-dlp -o "%(id)s.%(ext)s'
 alias mem='BLOCK_BUTTON=1 memory'
+# ZSH aliases
+alias zreloadkeys="killall sxhkd && sxhkd &!"
