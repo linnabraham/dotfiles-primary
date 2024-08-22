@@ -1,12 +1,3 @@
-# Use settings from ~/.bashrc
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
-fi
-
-if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec startx
-fi
-
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/experimental:$PATH"
