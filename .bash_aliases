@@ -10,6 +10,7 @@ alias p='ping -c 10 google.com'
 alias wget='wget -c'
 alias yta='yt-dlp --extract-audio --audio-format mp3'
 alias gd='git diff'
+alias ga='git add'
 alias gp="git push"
 alias gs='git status'
 alias gsu='git status -uno'
@@ -34,6 +35,7 @@ if command -v exa >/dev/null; then
 fi
 alias ytdl-short='yt-dlp -o "%(id)s.%(ext)s'
 alias mem='BLOCK_BUTTON=1 memory'
+alias lsblk='lsblk -o name,size,type,label,uuid,mountpoint'
 
 # colorize commands
 alias \
