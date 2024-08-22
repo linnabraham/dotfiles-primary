@@ -7,10 +7,6 @@ if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]
   exec startx
 fi
 
-# Add iraf setup commands
- if [ -e /home/linn/.iraf/setup.sh ]; then
-     source /home/linn/.iraf/setup.sh
- fi
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin/experimental:$PATH"
