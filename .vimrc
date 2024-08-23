@@ -90,6 +90,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 let g:UltiSnipsExpandTrigger="<tab>"
 set relativenumber
+" higlight search terms
+set hlsearch
 " map ctrl-backspace to clear whole word
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
