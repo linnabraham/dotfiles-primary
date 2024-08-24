@@ -27,6 +27,7 @@ clipmenud &
 #battery-lev.sh &
 /usr/bin/dropbox &
 alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x150 -i 127x64 -d 1 &
+active-time &
 
 while true; do
 khal-notify.py
