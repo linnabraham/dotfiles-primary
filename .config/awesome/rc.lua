@@ -568,3 +568,12 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+ awful.spawn.with_shell("/home/linn/.config/openbox/autostart")
+
+-- start apps defined in autostart locations
+ awful.spawn.with_shell(
+     'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
+     'xrdb -merge <<< "awesome.started:true";' ..
+     'dex --environment Awesome --autostart --search-paths "${XDG_CONFIG_HOME:-$HOME/.config}/autostart:${XDG_CONFIG_DIRS:-/etc/xdg}/autostart";'
+     )
