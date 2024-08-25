@@ -8,6 +8,17 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
+local statusbar = require("statusbar.aw-volume")
+local rambar = require("statusbar.aw-system")
+local activetime = require("statusbar.aw-active-time")
+local discharge = require("statusbar.aw-discharge")
+local space_separator = wibox.widget.textbox(" ")
+local musicbar = require("statusbar.aw-music")
+local music_widget = musicbar.create_music_widget()
+local pacbar = require("statusbar.aw-pacman")
+--local dunstbar = require("statusbar.aw-dunst")
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -210,10 +221,31 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
+            --dunstbar,
+            --statusbar.volume_widget,
+            pacbar,
+            space_separator,
             mytextclock,
-            s.mylayoutbox,
+            rambar.disk_widget,
+            space_separator,
+            rambar.ram_widget,
+            space_separator,
+        brightness_widget{
+            type = 'icon_and_text',
+            program = 'xbacklight',
+            step = 2,
+        },
+            space_separator,
+            discharge,
+            space_separator,
+            statusbar,
+            music_widget,
+            space_separator,
+            activetime,
+            space_separator,
+            wibox.widget.systray(),
+            battery_widget(),
+            --s.mylayoutbox,
         },
     }
 end)
