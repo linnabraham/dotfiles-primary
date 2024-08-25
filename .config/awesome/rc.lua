@@ -402,7 +402,12 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize horizontally", group = "client"}),
+
+awful.key({ modkey, "Shift" }, "Return", function ()
+    awful.spawn("alacritty -e sh -c 'tmux attach-session -t default || tmux new-session -s default'")
+end,
+{description = "open alacritty with tmux session", group = "launcher"})
 )
 
 -- Bind all key numbers to tags.
