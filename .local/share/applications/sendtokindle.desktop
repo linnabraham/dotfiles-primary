@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=sendtokindle
+Exec=/home/linn/.local/bin/sendtokindle %f
+#Icon=/usr/share/icons/Adwaita/512x512/devices/ebook-reader.png
+Icon=/usr/share/icons/Adwaita/scalable/devices/ebook-reader.svg
+Categories=Other;
+NoDisplay=true
+MimeType=application/pdf;application/epub+zip
+Terminal=false
