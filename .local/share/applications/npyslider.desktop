@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=npyslider
+Comment=Open .npy 3D data for radio data cubes
+Exec=npyview_slider.py  %f
+Icon=utilities-terminal
+Terminal=false
+Type=Application
+MimeType=application/octet-stream;
