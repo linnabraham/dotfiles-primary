@@ -539,7 +539,11 @@ properties = { opacity = 1, maximized = false, floating = false } },
 { rule = { class = "Zotero" },
 
 properties = { opacity = 1, maximized = false, floating = false } },
-}
+},
+
+    -- Brave Picture-in-Picture
+    { rule = { name = "Picture in picture"},
+      properties = { floating = true, above = true, maximized = false, sticky = true} }
 -- }}}
 
 -- {{{ Signals
