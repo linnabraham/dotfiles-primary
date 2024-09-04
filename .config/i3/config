@@ -227,3 +227,4 @@ for_window [class="org-wellkord-globonote-Main"] floating enable, resize set 320
 # startup a hidden terminal for general purpose work that becomes a scratchpad
 exec --no-startup-id alacritty --class="workterm"
 exec --no-startup-id $HOME/.config/openbox/autostart
+bindsym $mod+Shift+Return exec --no-startup-id alacritty -e sh -c 'tmux attach-session -t default || tmux new-session -s default'
