@@ -30,8 +30,9 @@ Print
 control + Print
 	maimpick
 super + Return
-	alacritty
-	zsh -i -c "tmux_with_terminal"
+        xfce4-terminal
+	#zsh -i -c "tmux_with_terminal"
+	#alacritty
 super + a
         j4-dmenu-desktop
         jgmenu_run
