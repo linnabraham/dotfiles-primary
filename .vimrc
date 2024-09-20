@@ -44,12 +44,13 @@ Plug 'lervag/vimtex'
 Plug 'preservim/nerdcommenter' " For code commenting powers
 Plug 'preservim/nerdtree'
 "" A bunch of useful language related snippets (ultisnips is the engine).
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'tpope/vim-surround'
 "Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'mileszs/ack.vim'
 Plug 'jamessan/vim-gnupg'
 
+Plug 'romainl/vim-qf' "Quit quickfix window when last window is closed
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -101,3 +102,7 @@ set statusline+=%F
 nnoremap <C-n> :NERDTreeToggle<CR>
 " make mupdf default reader for vimtex
 let g:vimtex_view_method = 'mupdf'
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/my-snippets/']
+let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
+let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
