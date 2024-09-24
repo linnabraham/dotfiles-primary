@@ -29,13 +29,14 @@ alias mv='mv -iv'
 alias rm='rm -Iv'
 alias mkd="mkdir -pv"
 alias pi='sudo pacman -S --needed --noconfirm'
-alias lf='lfub'
+alias lf='lfcd'
 if command -v exa >/dev/null; then
     alias ls='exa-wrapper.sh'
 fi
 alias ytdl-short='yt-dlp -o "%(id)s.%(ext)s'
 alias mem='BLOCK_BUTTON=1 memory'
 alias lsblk='lsblk -o name,size,type,label,uuid,mountpoint'
+alias v='vim'
 
 # colorize commands
 alias \
@@ -47,7 +48,7 @@ alias \
 # frequently used programs
 alias \
     g='git' \
-    p='pacman'
-
+    p='pacman'\
+    py='python'
 # ZSH aliases
 alias zreloadkeys="killall sxhkd && sxhkd &!"
