@@ -168,3 +168,8 @@ bindkey '^[[B' history-substring-search-down
 export LS_COLORS="$LS_COLORS:ow=1;34;4:"
 GPG_TTY=`tty`
 export GPG_TTY
+
+xcat() {
+    xsel --clipboard --input < "$1"
+}
+
