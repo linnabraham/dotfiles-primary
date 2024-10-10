@@ -102,6 +102,7 @@ set statusline+=%F
 nnoremap <C-n> :NERDTreeToggle<CR>
 " make mupdf default reader for vimtex
 let g:vimtex_view_method = 'mupdf'
+let g:vimtex_quickfix_open_on_warning = 0
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/my-snippets/']
 let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
