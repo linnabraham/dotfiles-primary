@@ -45,7 +45,8 @@ cmd open ${{
 		;;
 	audio/*) mpv --audio-display=no $f ;;
 	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-	application/pdf|application/vnd*|application/epub*) setsid -f evince $fx >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*) setsid -f evince $fx >/dev/null 2>&1 ;;
+	application/epub*) setsid -f foliate $fx >/dev/null 2>&1 ;;
 	application/pgp-encrypted) $EDITOR $fx ;;
         *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
     esac
