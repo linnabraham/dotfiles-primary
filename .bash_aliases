@@ -52,3 +52,6 @@ alias \
     py='python'
 # ZSH aliases
 alias zreloadkeys="killall sxhkd && sxhkd &!"
+# use fzf for searching among non hidden files and cd to the base directory
+alias fcd='cd $(find . .local -type f -not -path \*/.\* -print0 2>/dev/null | fzf --read0 | xargs -r -0 dirname)'
+
