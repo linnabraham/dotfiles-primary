@@ -149,3 +149,6 @@ cmd share $curl -F"file=@$fx" https://0x0.st | xclip -selection c
 
 cmd trash %trash-put $fx
 map T trash
+cmd yank-paths-gui $printf '%s' "$fx" | sed 's|^|file://|' | xclip -i -selection clipboard -t text/uri-list
+map Y yank-paths-gui
+map x $printf "%s" "$fx" | xclip -selection clipboard
