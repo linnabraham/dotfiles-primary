@@ -51,6 +51,7 @@ Plug 'tpope/vim-surround'
 Plug 'jamessan/vim-gnupg'
 
 Plug 'romainl/vim-qf' "Quit quickfix window when last window is closed
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -100,10 +101,14 @@ noremap! <C-h> <C-w>
 set statusline+=%F
 " Hotkey for NERDTreeToggle
 nnoremap <C-n> :NERDTreeToggle<CR>
-" make mupdf default reader for vimtex
-let g:vimtex_view_method = 'mupdf'
+let g:vimtex_view_general_viewer = 'evince'
 let g:vimtex_quickfix_open_on_warning = 0
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/plugged/my-snippets/']
 let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
 let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
 let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
+" set colorscheme for gvim
+if has("gui_running")
+    colorscheme sorbet
+endif
+let g:airline_section_b = '%f'
