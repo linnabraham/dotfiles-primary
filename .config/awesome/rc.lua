@@ -324,6 +324,19 @@ globalkeys = gears.table.join(
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
+})
+
+awful.keyboard.append_global_keybindings({
+    awful.key({ modkey}, "e",
+        function ()
+            if client.focus then
+                client.focus:swap(awful.client.getmaster())
+            end
+        end,
+        {description = "move focused window to master", group = "client"}),
+})
+
+
 
     awful.key({ modkey, "Control" }, "n",
               function ()
