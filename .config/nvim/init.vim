@@ -42,6 +42,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'lervag/vimtex'
 Plug 'preservim/nerdcommenter' " For code commenting powers
 Plug 'preservim/nerdtree'
+"" A bunch of useful language related snippets (ultisnips is the engine).
+Plug 'SirVer/ultisnips'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -81,3 +83,6 @@ let g:vimtex_quickfix_open_on_warning = 0
 nnoremap <C-f> :NERDTreeFind<CR>
 " Show full file path in status bar
 set statusline+=%F
+let g:UltiSnipsExpandTrigger       = '<Tab>'    " use Tab to expand snippets
+let g:UltiSnipsJumpForwardTrigger  = '<Tab>'    " use Tab to move forward through tabstops
+let g:UltiSnipsJumpBackwardTrigger = '<S-Tab>'  " use Shift-Tab to move backward through tabstops
