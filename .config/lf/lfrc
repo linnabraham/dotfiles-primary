@@ -44,7 +44,7 @@ cmd open ${{
 		done &
 		;;
 	audio/*) mpv --audio-display=no $f ;;
-	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	video/*) setsid -f mpv --hwdec=auto $f -quiet >/dev/null 2>&1 ;;
 	application/pdf|application/vnd*) setsid -f evince $fx >/dev/null 2>&1 ;;
 	application/epub*) setsid -f foliate $fx >/dev/null 2>&1 ;;
 	application/pgp-encrypted) $EDITOR $fx ;;
