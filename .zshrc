@@ -26,7 +26,7 @@ if [[ -f ~/.bashrc_scripts ]]; then
 fi
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-export EDITOR="/usr/bin/vim"
+export EDITOR="/usr/bin/nvim"
 
 # END copied from bashrc
 # BEGIN Lukesmiths changes
