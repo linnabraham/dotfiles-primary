@@ -16,16 +16,21 @@
 #
 #xfce-mcs-manager &
 
+dunst &
 setbg -s /home/linn/Downloads/wallpapers
 polywrapper.sh &
 #copyq &
 mail-notify.sh &
+iucaa-mail-notify.sh &
 sxhkd &
 pcmanfm-qt --daemon-mode &
 xautolock -time 10 -locker i3lock-custom -detectsleep &
 clipmenud &
 #battery-lev.sh &
 /usr/bin/dropbox &
+xclickroot xmenu.sh &
+playerctld daemon &
+mpdscribble &
 alttab -w 1 -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x150 -i 127x64 -d 1 &
 active-time &
 
@@ -33,7 +38,3 @@ while true; do
 khal-notify.py
 sleep 10
 done &
-xclickroot xmenu.sh &
-gtk-launch koofr &
-globonote &
-mpdscribble &
