@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 # number of lines that are saved in memory
-HISTSIZE=10000
+HISTSIZE=500000
 # number of lines that are saved to file
 SAVEHIST=500000
 setopt autocd # Automatically cd into typed directory.
@@ -127,8 +127,9 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
 python_venv
 #source ~/.scripts/virtualenvwrapper.plugin.zsh
-source $HOME/.zsh_aliases
+# source $HOME/.zsh_aliases
 source $HOME/.extra_paths
+source $HOME/.secrets
 export HABITICA_TOKEN=87a1a0dd-5b8f-4b34-8336-55a56a0401ef
 export HABITICA_UUID=ad875744-0b26-4f3d-af1b-ab54fade5d13
 source $HOME/.local/bin/zbell.plugin.zsh
@@ -156,9 +157,9 @@ lfcd () {
 bindkey -s '^o' 'lfcd\n'
 bindkey '^R' history-incremental-search-backward
 bindkey '[Z' autosuggest-accept  # bind ctrl+tab to accept the first autosuggestion
-bindkey '^[[A' history-substring-search-up
+# bindkey '^[[A' history-substring-search-up
 #bindkey '^[[1;2C' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# bindkey '^[[B' history-substring-search-down
 #bindkey '^[[1;5D' history-substring-search-down
 
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
@@ -172,4 +173,5 @@ export GPG_TTY
 xcat() {
     xsel --clipboard --input < "$1"
 }
-
+export FZF_DEFAULT_OPTS="--layout=reverse --height=60% --border"
+setopt IGNORE_EOF # ignore Ctrl-D
